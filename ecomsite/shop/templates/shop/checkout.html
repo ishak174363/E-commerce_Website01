@@ -40,6 +40,7 @@
     </div>
         <div class="row m-5">
           <div class="col-md-12">
+            <!--Form created-->
               <form method="POST" >
                 {% csrf_token %}
                     <input type="hidden" id="items" name="items">
@@ -87,6 +88,8 @@
         </div>
     </div>
 </body>
+
+<!--total amount and items name -->
 <script type="text/javascript">
 if(localStorage.getItem('cart')==null){
   var cart ={};
@@ -100,10 +103,6 @@ for(item in cart){
   let quantity = cart[item][0];
   let price = cart[item][2];
   total = total + cart[item][2];
-
-
-
-
 
 
   itemString = `  <li class="list-group-item d-flex justify-content-between align-items-center">${quantity} of  ${name}     <span class="badge badge-warning badge-pill">${price}</span></li>`;

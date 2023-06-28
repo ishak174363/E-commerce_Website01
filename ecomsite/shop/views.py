@@ -39,3 +39,6 @@ def checkout(request):
         order.save()   
 
     return render(request,'shop/checkout.html')
+
+def feature(request):
+    return render(request,'shop/feature.html')
